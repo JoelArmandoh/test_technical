@@ -42,13 +42,13 @@ Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API
  
      * Employee Routes
     
--- http://127.0.0.1:8000/api/v1/employee/data-get 
+     -- http://127.0.0.1:8000/api/v1/employee/data-get 
     
--- http://127.0.0.1:8000/api/v1/employee/create 
+     -- http://127.0.0.1:8000/api/v1/employee/create 
     
--- http://127.0.0.1:8000/api/v1/employee/delete/3 
+     -- http://127.0.0.1:8000/api/v1/employee/delete/3 
     
--- http://127.0.0.1:8000/api/v1/employee/data-update/2 
+     -- http://127.0.0.1:8000/api/v1/employee/data-update/2 
     
--- http://127.0.0.1:8000/api/v1/employee/search/ 
+     -- http://127.0.0.1:8000/api/v1/employee/search/ 
 
