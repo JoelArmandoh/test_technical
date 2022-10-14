@@ -9,10 +9,10 @@
 
 ## Resumen de lo que hace el sistema o app desarrollada.
 
--El codigo, por medio de Postman se puede visualizar las funciones Create, Update, Delete,Read y Search. 
+-- El codigo, por medio de Postman se puede visualizar las funciones Create, Update, Delete,Read y Search. 
 Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene dentro de la app.
 
--JWT: Es una libreria que se utiliza para la autenticacion de token, que tiene un tiempo exacto de vida cada token y la utilizaremos para autenticar usuarios en la API.
+-- JWT: Es una libreria que se utiliza para la autenticacion de token, que tiene un tiempo exacto de vida cada token y la utilizaremos para autenticar usuarios en la API.
 
 ## Pasos requeridos para montar la app en un entorno.
 
