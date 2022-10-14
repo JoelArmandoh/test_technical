@@ -38,6 +38,12 @@ Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API
 
      -- http://127.0.0.1:8000/api/v1/auth/register 
     
+     -- http://127.0.0.1:8000/api/v1/auth/logout 
+    
+     -- http://127.0.0.1:8000/api/v1/auth/refresh 
+    
+     -- http://127.0.0.1:8000/api/v1/auth/me 
+    
  
      * Employee Routes
     
