@@ -61,27 +61,26 @@ Route::group([
                       URL             Controller And            Funtion
         Route::post('create', [EmployeeController::class, 'create']);
     });
-/*************
-    //Esta es la ruta para poder borrar
+
+    ## Esta es la ruta para poder borrar
      Route::group([
         'prefix' => 'employee/'
     ],     
     function ($router) {
-//                   URL             Controller And            Funtion
+                  URL             Controller And            Funtion
         Route::delete('delete/{id}', [EmployeeController::class, 'delete']);
     });
-----------------------------------------------------------------------------
-   //Esta es la ruta para poder obtener todos los datos
+## Esta es la ruta para poder obtener todos los datos
       Route::group([
         'prefix' => 'employee/'
     ], 
     function ($router) {
-//                   URL             Controller And            Funtion
+                     URL             Controller And            Funtion
         Route::get('data-get', [EmployeeController::class, "dataGet"]);
     });
-----------------------------------------------------------------------------
-   //Esta es la ruta para poder actualizar los registros
-    Route::group([
+    
+    ## Esta es la ruta para poder actualizar los registros
+         Route::group([
         'prefix' => 'employee/'
     ],     
     function ($router) {
