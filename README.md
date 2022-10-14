@@ -42,18 +42,18 @@ Route::group([
      * Auth Routes
     
 
--- http://127.0.0.1:8000/api/v1/auth/register 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/auth/register 
     
  
      * Employee Routes
     
--- http://127.0.0.1:8000/api/v1/employee/data-get 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/employee/data-get 
     
--- http://127.0.0.1:8000/api/v1/employee/create 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/employee/create 
     
--- http://127.0.0.1:8000/api/v1/employee/delete/3 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/employee/delete/3 
     
--- http://127.0.0.1:8000/api/v1/employee/data-update/2 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/employee/data-update/2 
     
--- http://127.0.0.1:8000/api/v1/employee/search/ 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/employee/search/ 
 
