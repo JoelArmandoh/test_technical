@@ -41,63 +41,16 @@ Route::group([
     /*************
      * Auth Routes
      **************/
-        Route::group([
-            'middleware' => 'api',
-            'prefix' => 'auth/'
 
-        ], function ($router) {
-            Route::post('register', [AuthController::class, 'register']);
-            Route::post('login', [AuthController::class, 'login'])->name('login');
-            Route::post('logout', [AuthController::class, 'logout'])->name('logout');
-            Route::post('refresh', [AuthController::class, 'refresh'])->name('refresh');
-            Route::post('me', [AuthController::class, 'me'])->name('me');
-
+## http://127.0.0.1:8000/api/v1/auth/register 127.0.0.1
+    
  /*************
      * Employee Routes
      **************/
-
- ## Esta es la ruta para poder crear
-
-    Route::group([
-        'prefix' => 'employee/'
-    ], 
-    function ($router) {
-                      URL             Controller And            Funtion
-        Route::post('create', [EmployeeController::class, 'create']);
-    });
-
-    ## Esta es la ruta para poder borrar
-     Route::group([
-        'prefix' => 'employee/'
-    ],     
-    function ($router) {
-                  URL             Controller And            Funtion
-        Route::delete('delete/{id}', [EmployeeController::class, 'delete']);
-    });
-## Esta es la ruta para poder obtener todos los datos
-      Route::group([
-        'prefix' => 'employee/'
-    ], 
-    function ($router) {
-                     URL             Controller And            Funtion
-        Route::get('data-get', [EmployeeController::class, "dataGet"]);
-    });
     
-    ## Esta es la ruta para poder actualizar los registros
-         Route::group([
-        'prefix' => 'employee/'
-    ],     
-    function ($router) {
-                  URL             Controller And            Funtion
-        Route::put('data-update/{id}', [EmployeeController::class, "update"]);
-    });
+## http://127.0.0.1:8000/api/v1/employee/data-get 127.0.0.1
+## http://127.0.0.1:8000/api/v1/employee/create 127.0.0.1
+## http://127.0.0.1:8000/api/v1/employee/delete/3 127.0.0.1
+## http://127.0.0.1:8000/api/v1/employee/data-update/2 127.0.0.1
+## http://127.0.0.1:8000/api/v1/employee/search/ 127.0.0.1
 
-    ## Esta es la ruta para poder aplicar los filtros de mayor a menor, nombre filtrado de busqueda por nombre, id, email y de forma descendiente  
-    Route::group([
-        'prefix' => 'employee/'
-    ], 
-    function ($router) {
-                   URL             Controller And            Funtion
-        Route::get('search/{id}', [EmployeeController::class, "searchCustomer"]);
-    });
-});
