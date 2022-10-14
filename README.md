@@ -84,16 +84,16 @@ Route::group([
         'prefix' => 'employee/'
     ],     
     function ($router) {
-//                   URL             Controller And            Funtion
+                  URL             Controller And            Funtion
         Route::put('data-update/{id}', [EmployeeController::class, "update"]);
     });
 
-    //Esta es la ruta para poder aplicar los filtros de mayor a menor, nombre filtrado de busqueda por nombre, id, email y de forma descendiente  
+    ## Esta es la ruta para poder aplicar los filtros de mayor a menor, nombre filtrado de busqueda por nombre, id, email y de forma descendiente  
     Route::group([
         'prefix' => 'employee/'
     ], 
     function ($router) {
-//                   URL             Controller And            Funtion
+                   URL             Controller And            Funtion
         Route::get('search/{id}', [EmployeeController::class, "searchCustomer"]);
     });
 });
