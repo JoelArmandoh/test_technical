@@ -30,8 +30,7 @@ Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene d
 
 
 ## URLs de acciones y como implementarlo de forma detallada.
-
---  Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API.
+*Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API.
 
    
      * Auth Routes
