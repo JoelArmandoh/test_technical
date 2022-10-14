@@ -15,7 +15,11 @@ Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene d
 -JWT: Es una libreria que se utiliza para la autenticacion de token, que tiene un tiempo exacto de vida cada token y la utilizaremos para autenticar usuarios en la API.
 
 ## Pasos requeridos para montar la app en un entorno.
--Crear la logica del frontend, Programar y diseñar para el consumo la API, copiar y pegar las URLS.
+
+-Descargar Laravel 9 en https://laravel.com/docs/9.x/installation 
+-Clonar el repositorio
+-luego de estar clonado correr el comando: php artisan serve
+
 
 ## Estructura del proyecto.
 - Nombre del proyecto. ...TestComplete.
