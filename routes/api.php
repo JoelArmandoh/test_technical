@@ -93,7 +93,7 @@ Route::group([
     
     function ($router) {
 //                   URL             Controller And            Funtion
-        Route::get('search/{id}', [EmployeeController::class, "searchCustomer"]);
+        Route::get('search/{name}', [EmployeeController::class, "searchCustomer"]);
 
     });
 
