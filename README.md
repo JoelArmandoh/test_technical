@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -7,60 +7,93 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Resumen de lo que hace el sistema o app desarrollada.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-El codigo, por medio de Postman se puede visualizar las funciones Create, Update, Delete,Read y Search. 
+Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene dentro de la app.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-JWT: Es una libreria que se utiliza para la autenticacion de token, que tiene un tiempo exacto de vida cada token y la utilizaremos para autenticar usuarios en la API.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##Pasos requeridos para montar la app en un entorno.
+-Crear la logica del frontend, Programar y diseñar para el consumo la API, copiar y pegar las URLS.
 
-## Learning Laravel
+##Estructura del proyecto.
+- Nombre del proyecto. ...TestComplete.
+- Objetivos del proyecto. ... Conseguir la Oportunidad de laborar en BitBoxCaribe.
+- Destinatarios del proyecto.  briana.melo@ikea.com.do
+- Implementación y calendario del proyecto.  4 días contando a partir de que recibas este  correo.
+- Recursos del proyecto. VsCode, Php, Laravel, Mysql, JWT.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## URLs de acciones y como implementarlo de forma detallada.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API.
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'v1/'
 
-## Laravel Sponsors
+], function ($router) {
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    /*************
+     * Auth Routes
+     **************/
+        Route::group([
+            'middleware' => 'api',
+            'prefix' => 'auth/'
 
-### Premium Partners
+        ], function ($router) {
+            Route::post('register', [AuthController::class, 'register']);
+            Route::post('login', [AuthController::class, 'login'])->name('login');
+            Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+            Route::post('refresh', [AuthController::class, 'refresh'])->name('refresh');
+            Route::post('me', [AuthController::class, 'me'])->name('me');
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ /*************
+     * Employee Routes
+     **************/
+----------------------------------------------------------------------------    
+//Esta es la ruta para poder crear
+    Route::group([
+        'prefix' => 'employee/'
+    ], 
+    function ($router) {
+//                   URL             Controller And            Funtion
+        Route::post('create', [EmployeeController::class, 'create']);
+    });
+----------------------------------------------------------------------------
+    //Esta es la ruta para poder borrar
+     Route::group([
+        'prefix' => 'employee/'
+    ],     
+    function ($router) {
+//                   URL             Controller And            Funtion
+        Route::delete('delete/{id}', [EmployeeController::class, 'delete']);
+    });
+----------------------------------------------------------------------------
+   //Esta es la ruta para poder obtener todos los datos
+      Route::group([
+        'prefix' => 'employee/'
+    ], 
+    function ($router) {
+//                   URL             Controller And            Funtion
+        Route::get('data-get', [EmployeeController::class, "dataGet"]);
+    });
+----------------------------------------------------------------------------
+   //Esta es la ruta para poder actualizar los registros
+    Route::group([
+        'prefix' => 'employee/'
+    ],     
+    function ($router) {
+//                   URL             Controller And            Funtion
+        Route::put('data-update/{id}', [EmployeeController::class, "update"]);
+    });
+----------------------------------------------------------------------------
+    //Esta es la ruta para poder aplicar los filtros de mayor a menor, nombre filtrado de busqueda por nombre, id, email y de forma descendiente  
+    Route::group([
+        'prefix' => 'employee/'
+    ], 
+    function ($router) {
+//                   URL             Controller And            Funtion
+        Route::get('search/{id}', [EmployeeController::class, "searchCustomer"]);
+    });
+});
