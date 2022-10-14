@@ -32,17 +32,12 @@ Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene d
 ## URLs de acciones y como implementarlo de forma detallada.
 
 Las Rutas las agrupe con el Prefijo V1 para poder controlar la version de la API.
-Route::group([
-    'middleware' => 'api',
-    'prefix' => 'v1/'
-
-], function ($router) {
 
    
      * Auth Routes
     
 
--- http://127.0.0.1:8000/api/v1/auth/register 
+     -- http://127.0.0.1:8000/api/v1/auth/register 
     
  
      * Employee Routes
