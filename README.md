@@ -42,7 +42,7 @@ Route::group([
      * Auth Routes
     
 
-## http://127.0.0.1:8000/api/v1/auth/register 127.0.0.1
+-- http://127.0.0.1:8000/api/v1/auth/register 127.0.0.1
     
  
      * Employee Routes
