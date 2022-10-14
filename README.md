@@ -16,9 +16,9 @@ Librerías usadas incluyendo resumen de lo que hace la misma o que papel tiene d
 
 ## Pasos requeridos para montar la app en un entorno.
 
--Descargar Laravel 9 en https://laravel.com/docs/9.x/installation 
--Clonar el repositorio
--luego de estar clonado correr el comando: php artisan serve
+- Descargar Laravel 9 en https://laravel.com/docs/9.x/installation 
+- Clonar el repositorio
+- luego de estar clonado correr el comando: php artisan serve
 
 
 ## Estructura del proyecto.
