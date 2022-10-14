@@ -53,13 +53,12 @@ Route::group([
      **************/
 
  ## Esta es la ruta para poder crear
- 
 
     Route::group([
         'prefix' => 'employee/'
     ], 
     function ($router) {
-//                   URL             Controller And            Funtion
+                      URL             Controller And            Funtion
         Route::post('create', [EmployeeController::class, 'create']);
     });
 /*************
